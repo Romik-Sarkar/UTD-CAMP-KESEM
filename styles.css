@@ -608,3 +608,286 @@ main {
   outline: 2px solid var(--kesem-sunshine-yellow);
   outline-offset: 2px;
 }
+
+/* ===================================
+           Slideshow Styles
+           ================================== */
+
+        .slideshow-container {
+          max-width: 1000px;
+          margin: 3rem auto;
+          position: relative;
+          background: var(--kesem-moon-white);
+          border-radius: 15px;
+          box-shadow: 0 10px 30px var(--shadow-medium);
+          overflow: hidden;
+        }
+
+        .slide {
+          display: none;
+          position: relative;
+          text-align: center;
+        }
+
+        .slide.active {
+          display: block;
+        }
+
+        .slide img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+
+        .slide-placeholder {
+          width: 100%;
+          height: 400px;
+          background: linear-gradient(45deg, var(--kesem-grass-green), var(--kesem-sky-blue));
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--kesem-moon-white);
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+
+        .slide-caption {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(transparent, rgba(0, 56, 76, 0.8));
+          color: var(--kesem-moon-white);
+          padding: 2rem 1rem 1rem;
+          text-align: center;
+        }
+
+        .slide-caption h3 {
+          font-size: 1.3rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .slide-caption p {
+          font-size: 0.9rem;
+          opacity: 0.9;
+        }
+
+        /* Navigation arrows */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -30px;
+          padding: 16px;
+          color: var(--kesem-moon-white);
+          font-weight: bold;
+          font-size: 24px;
+          background: rgba(0, 56, 76, 0.7);
+          border: none;
+          user-select: none;
+          transition: all 0.3s ease;
+          border-radius: 0 5px 5px 0;
+        }
+
+        .next {
+          right: 0;
+          border-radius: 5px 0 0 5px;
+        }
+
+        .prev:hover, .next:hover {
+          background: rgba(0, 56, 76, 0.9);
+          transform: scale(1.1);
+        }
+
+        /* Dots indicator */
+        .dots-container {
+          text-align: center;
+          padding: 20px;
+          background: var(--kesem-moon-white);
+        }
+
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 5px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: all 0.3s ease;
+        }
+
+        .dot.active, .dot:hover {
+          background-color: var(--kesem-lake-blue);
+          transform: scale(1.2);
+        }
+
+        /* ===================================
+           Photo Grid Gallery
+           ================================== */
+
+        .gallery-section {
+          max-width: 1200px;
+          margin: 4rem auto;
+          padding: 0 2rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+          color: var(--kesem-lake-blue);
+          text-align: center;
+          margin-bottom: 2rem;
+          font-weight: 600;
+        }
+
+        .photo-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+          margin-bottom: 3rem;
+        }
+
+        .photo-card {
+          background: var(--kesem-moon-white);
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 5px 15px var(--shadow-light);
+          transition: all 0.3s ease;
+        }
+
+        .photo-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px var(--shadow-medium);
+        }
+
+        .photo-card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .photo-placeholder {
+          width: 100%;
+          height: 200px;
+          background: linear-gradient(45deg, var(--kesem-grass-green), var(--kesem-pool-aqua));
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--kesem-moon-white);
+          font-weight: 500;
+        }
+
+        .photo-info {
+          padding: 1rem;
+        }
+
+        .photo-info h4 {
+          color: var(--kesem-lake-blue);
+          margin-bottom: 0.5rem;
+          font-size: 1.1rem;
+        }
+
+        .photo-info p {
+          color: var(--text-light);
+          font-size: 0.9rem;
+        }
+
+        /* ===================================
+           Instructions Section
+           ================================== */
+
+        .instructions {
+          background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+          padding: 2rem;
+          margin: 3rem auto;
+          max-width: 1000px;
+          border-radius: 15px;
+          border-left: 5px solid var(--kesem-sunshine-yellow);
+        }
+
+        .instructions h3 {
+          color: var(--kesem-lake-blue);
+          margin-bottom: 1rem;
+          font-size: 1.3rem;
+        }
+
+        .instructions p {
+          margin-bottom: 1rem;
+          line-height: 1.7;
+        }
+
+        .instructions ul {
+          list-style: disc;
+          margin-left: 2rem;
+          margin-bottom: 1rem;
+        }
+
+        .instructions li {
+          margin-bottom: 0.5rem;
+        }
+
+        /* ===================================
+           Responsive Design
+           ================================== */
+
+        @media screen and (max-width: 768px) {
+          .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            flex-direction: column;
+            background-color: var(--kesem-moon-white);
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            padding: 2rem 0;
+            gap: 0;
+          }
+
+          .nav-menu.active {
+            left: 0;
+          }
+
+          .nav-item {
+            margin: 1rem 0;
+          }
+
+          .hamburger {
+            display: flex;
+          }
+
+          .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+          }
+
+          .hamburger.active .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+          }
+
+          .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+          }
+
+          .page-title {
+            font-size: 2rem;
+          }
+
+          .slideshow-container {
+            margin: 2rem 1rem;
+          }
+
+          .slide img, .slide-placeholder {
+            height: 300px;
+          }
+
+          .photo-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+          }
+
+          .gallery-section {
+            padding: 0 1rem;
+          }
+        }

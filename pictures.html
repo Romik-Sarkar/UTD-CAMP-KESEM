@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Kesem UTD - Supporting Children Through Cancer</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar - This will be included from navbar.html -->
+    <div id="navbar-placeholder"></div>
+
+<!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1 class="page-title">Our Camp Memories</h1>
+            <p class="page-subtitle">Capturing moments of joy, friendship, and healing</p>
+        </section>
+
+        <!-- Featured Slideshow -->
+        <section class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide-placeholder">🎨 Arts & Crafts Activity</div>
+                <div class="slide-caption">
+                    <h3>Creative Expression</h3>
+                    <p>Campers explore their creativity through various art projects and crafts</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-placeholder">🏃‍♀️ Outdoor Games</div>
+                <div class="slide-caption">
+                    <h3>Active Fun</h3>
+                    <p>Building friendships and confidence through team activities and sports</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-placeholder">🤝 Group Circle Time</div>
+                <div class="slide-caption">
+                    <h3>Support & Sharing</h3>
+                    <p>Safe spaces for campers to connect and share their experiences</p>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <div class="slide-placeholder">🎭 Performance & Shows</div>
+                <div class="slide-caption">
+                    <h3>Talent Show</h3>
+                    <p>Celebrating each camper's unique talents and building confidence</p>
+                </div>
+            </div>
+
+            <!-- Navigation arrows -->
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+            <!-- Dots indicator -->
+            <div class="dots-container">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </section>
+
+        
+        <!-- Photo Grid Gallery -->
+        <section class="gallery-section">
+            <h2 class="section-title">Camp Highlights</h2>
+            <div class="photo-grid">
+                <!-- Photo 1 -->
+                <div class="photo-card">
+                    <div class="photo-placeholder">🎨 Art Projects</div>
+                    <div class="photo-info">
+                        <h4>Creative Workshop</h4>
+                        <p>Campers expressing themselves through art therapy</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="photo-card">
+                    <div class="photo-placeholder">🏕️ Camp Setup</div>
+                    <div class="photo-info">
+                        <h4>Welcome Day</h4>
+                        <p>Setting up for an amazing week of camp</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="photo-card">
+                    <div class="photo-placeholder">🤗 Group Hug</div>
+                    <div class="photo-info">
+                        <h4>Friendship Circle</h4>
+                        <p>Building lasting bonds and support networks</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="photo-card">
+                    <div class="photo-placeholder">🎪 Camp Activities</div>
+                    <div class="photo-info">
+                        <h4>Fun & Games</h4>
+                        <p>Laughter and joy through interactive activities</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-card">
+                    <div class="photo-placeholder">🌟 Awards Ceremony</div>
+                    <div class="photo-info">
+                        <h4>Recognition</h4>
+                        <p>Celebrating achievements and milestones</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-card">
+                    <div class="photo-placeholder">📚 Storytelling</div>
+                    <div class="photo-info">
+                        <h4>Story Time</h4>
+                        <p>Sharing experiences through narrative therapy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <div id="footer-placeholder"></div>
+
+
+
+<script src="scripts/scripts.js"></script>
+<script src="scripts/pics.js"></script>
+</body>
+</html>

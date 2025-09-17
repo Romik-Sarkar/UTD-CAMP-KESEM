@@ -8,13 +8,13 @@
         <!-- Logo Section -->
         <div class="nav-logo">
             <img src="images/KesemLogo.png" alt="Camp Kesem UTD Logo" class="logo-img">
-            <span class="logo-text">Camp Kesem UTD</span>
+            <a href="index.html" class="logo-text">Camp Kesem UTD</a>
         </div>
         
         <!-- Navigation Menu -->
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="#pictures" class="nav-link">Pictures</a>
+                <a href="pictures.html" class="nav-link">Pictures</a>
             </li>
             <li class="nav-item">
                 <a href="#events" class="nav-link">Events</a>
@@ -39,22 +39,4 @@
     </div>
 </nav>
 
-<!-- JavaScript for mobile menu toggle -->
-<script>
-    // Mobile menu toggle functionality
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-</script>
+<script src="scripts/scripts.js"></script>
