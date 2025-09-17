@@ -1,0 +1,60 @@
+<!-- ===================================
+     Camp Kesem UTD - Navigation Bar
+     This file can be included in other pages
+     ================================== -->
+
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo Section -->
+        <div class="nav-logo">
+            <img src="images/KesemLogo.png" alt="Camp Kesem UTD Logo" class="logo-img">
+            <span class="logo-text">Camp Kesem UTD</span>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#pictures" class="nav-link">Pictures</a>
+            </li>
+            <li class="nav-item">
+                <a href="#events" class="nav-link">Events</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sponsors" class="nav-link">Sponsors</a>
+            </li>
+            <li class="nav-item">
+                <a href="#team" class="nav-link">Meet the Team</a>
+            </li>
+            <li class="nav-item">
+                <a href="#donate" class="nav-link donate-btn">Donate Now</a>
+            </li>
+        </ul>
+        
+        <!-- Mobile Menu Toggle (Hamburger) -->
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+<!-- JavaScript for mobile menu toggle -->
+<script>
+    // Mobile menu toggle functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>

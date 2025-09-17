@@ -1,0 +1,610 @@
+/* ===================================
+   Camp Kesem UTD - Main Stylesheet
+   ================================== */
+
+/* CSS Custom Properties (Variables) for Brand Colors */
+:root {
+  --kesem-lake-blue: #008FBE;
+  --kesem-pool-aqua: #00C08A;
+  --kesem-sunshine-yellow: #FFDB00;
+  --kesem-sky-blue: #00AEEF;
+  --kesem-grass-green: #A4D55D;
+  --kesem-night-sky-navy: #00384C;
+  --kesem-moon-white: #FFFFFF;
+  
+  /* Additional utility colors */
+  --text-dark: #333333;
+  --text-light: #666666;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================
+   Reset and Base Styles
+   ================================== */
+
+/* Basic reset for consistent styling across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the base font family for the entire site */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--kesem-moon-white);
+}
+
+/* Ensure images are responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* List styling */
+ul {
+  list-style: none;
+}
+
+/* ===================================
+   Navigation Bar Styles
+   ================================== */
+
+.navbar {
+  background-color: var(--kesem-moon-white);
+  box-shadow: 0 2px 10px var(--shadow-light);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo section styling */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--kesem-lake-blue);
+}
+
+/* Navigation menu styling */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--kesem-night-sky-navy);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--kesem-sky-blue);
+  color: var(--kesem-moon-white);
+  transform: translateY(-2px);
+}
+
+/* Special styling for the Donate Now button */
+.donate-btn {
+  background-color: var(--kesem-sunshine-yellow) !important;
+  color: var(--kesem-night-sky-navy) !important;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem !important;
+  box-shadow: 0 4px 15px rgba(255, 219, 0, 0.3);
+}
+
+.donate-btn:hover {
+  background-color: var(--kesem-pool-aqua) !important;
+  color: var(--kesem-moon-white) !important;
+  box-shadow: 0 6px 20px rgba(0, 192, 138, 0.4);
+}
+
+/* Mobile hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--kesem-lake-blue);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* ===================================
+   Main Content Styles
+   ================================== */
+
+main {
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+/* ===================================
+   Hero Section Styles
+   ================================== */
+
+.hero {
+  background: linear-gradient(135deg, var(--kesem-sky-blue), var(--kesem-pool-aqua));
+  color: var(--kesem-moon-white);
+  padding: 4rem 0;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.hero-placeholder {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed var(--kesem-moon-white);
+  border-radius: 15px;
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--kesem-moon-white);
+}
+
+/* ===================================
+           Mission Section Styles
+           ================================== */
+
+        .mission {
+          padding: 5rem 0;
+          background-color: var(--kesem-moon-white);
+        }
+
+        .mission-container {
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        .mission-title {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: var(--kesem-lake-blue);
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+
+        .mission-content {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .mission-text {
+          font-size: 1.2rem;
+          line-height: 1.8;
+          color: var(--text-dark);
+          text-align: center;
+          padding: 2rem;
+          background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+          border-radius: 15px;
+          border-left: 5px solid var(--kesem-pool-aqua);
+          box-shadow: 0 5px 20px var(--shadow-light);
+        }
+
+        .mission-highlight {
+          background-color: var(--kesem-moon-white);
+          padding: 2rem;
+          border-radius: 15px;
+          box-shadow: 0 5px 20px var(--shadow-medium);
+          border: 2px solid var(--kesem-grass-green);
+        }
+
+        .mission-highlight h3 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: var(--kesem-lake-blue);
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .mission-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .mission-list li {
+          font-size: 1.1rem;
+          padding: 0.75rem;
+          background: linear-gradient(135deg, var(--kesem-grass-green), var(--kesem-sky-blue));
+          color: var(--kesem-moon-white);
+          border-radius: 10px;
+          text-align: center;
+          font-weight: 500;
+          box-shadow: 0 3px 10px rgba(164, 213, 93, 0.3);
+        }
+
+
+/* ===================================
+   Call to Action Section Styles
+   ================================== */
+
+.cta {
+  background: linear-gradient(135deg, var(--kesem-night-sky-navy), var(--kesem-lake-blue));
+  color: var(--kesem-moon-white);
+  padding: 4rem 0;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cta-btn.primary {
+  background-color: var(--kesem-sunshine-yellow);
+  color: var(--kesem-night-sky-navy);
+  box-shadow: 0 5px 20px rgba(255, 219, 0, 0.3);
+}
+
+.cta-btn.primary:hover {
+  background-color: var(--kesem-pool-aqua);
+  color: var(--kesem-moon-white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 192, 138, 0.4);
+}
+
+.cta-btn.secondary {
+  background-color: transparent;
+  color: var(--kesem-moon-white);
+  border: 2px solid var(--kesem-moon-white);
+}
+
+.cta-btn.secondary:hover {
+  background-color: var(--kesem-moon-white);
+  color: var(--kesem-lake-blue);
+  transform: translateY(-3px);
+}
+
+/* ===================================
+   Footer Styles
+   ================================== */
+
+.footer {
+  background-color: var(--kesem-night-sky-navy);
+  color: var(--kesem-moon-white);
+  padding: 3rem 0 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--kesem-sunshine-yellow);
+  margin-bottom: 1rem;
+}
+
+.contact-item {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: var(--kesem-grass-green);
+}
+
+.contact-link {
+  color: var(--kesem-sky-blue);
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--kesem-sunshine-yellow);
+}
+
+.contact-info-text {
+  color: var(--kesem-moon-white);
+  opacity: 0.8;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  color: var(--kesem-moon-white);
+  transition: color 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-link:hover {
+  color: var(--kesem-sky-blue);
+  opacity: 1;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* ===================================
+   Responsive Design - Mobile Styles
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  /* Navigation mobile styles */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--kesem-moon-white);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Hero section mobile styles */
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Mission section mobile styles */
+  .mission-title {
+    font-size: 2rem;
+  }
+
+  .mission-text {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .mission-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA section mobile styles */
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* Footer mobile styles */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Extra small screens */
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero-container {
+    padding: 0 1rem;
+  }
+
+  .mission-container {
+    padding: 0 1rem;
+  }
+
+  .cta-container {
+    padding: 0 1rem;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===================================
+   Additional Utility Classes
+   ================================== */
+
+/* Text alignment utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Margin and padding utilities */
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+/* Color utilities */
+.text-primary { color: var(--kesem-lake-blue); }
+.text-secondary { color: var(--kesem-pool-aqua); }
+.text-accent { color: var(--kesem-sunshine-yellow); }
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus states for better accessibility */
+.nav-link:focus,
+.cta-btn:focus,
+.footer-link:focus {
+  outline: 2px solid var(--kesem-sunshine-yellow);
+  outline-offset: 2px;
+}

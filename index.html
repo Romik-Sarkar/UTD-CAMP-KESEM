@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Kesem UTD - Supporting Children Through Cancer</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar - This will be included from navbar.html -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to Camp Kesem UTD</h1>
+                    <p class="hero-subtitle">Creating hope, healing, and community for children affected by cancer</p>
+                </div>
+                <div class="hero-image">
+                   <img src="images/kesem_Group_Paint.jpg" alt="Camp Kesem Group Pic" class="hero-image">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Statement Section -->
+        <section class="mission">
+            <div class="mission-container">
+                <h2 class="mission-title">Our Mission</h2>
+                <div class="mission-content">
+                    <p class="mission-text">
+                        At Kesem, we are committed to creating a world where every child who has a parent with a cancer diagnosis or has lost a parent to cancer is never alone. We support these children through and beyond their parent's cancer with free, fun-filled creative programs and a lasting community.
+                    </p>
+                    <div class="mission-highlight">
+                        <h3>What We Provide:</h3>
+                        <ul class="mission-list">
+                            <li>🎨 Creative and therapeutic activities</li>
+                            <li>🤝 Lasting friendships and support networks</li>
+                            <li>🎯 Age-appropriate programming</li>
+                            <li>💝 Completely free programs for all families</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <div class="cta-container">
+                <h2 class="cta-title">Join Our Community</h2>
+                <p class="cta-text">Help us support children and families in the UTD community</p>
+                <div class="cta-buttons">
+                    <a href="#donate" class="cta-btn primary">Donate Now</a>
+                    <a href="#team" class="cta-btn secondary">Get Involved</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <div id="footer-placeholder"></div>
+
+
+
+    <script>
+        // Fetch the navbar content and insert it into its placeholder
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+
+        // Fetch the footer content and insert it into its placeholder
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
