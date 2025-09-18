@@ -1,0 +1,423 @@
+        /* ===================================
+           Team Section Layout
+           ================================== */
+
+        .team-section {
+          padding: 5rem 0;
+          background-color: var(--neutral-light);
+        }
+
+        .team-container {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        /* ===================================
+           Leadership Tiers
+           ================================== */
+
+        .leadership-tier {
+          margin-bottom: 5rem;
+        }
+
+        .tier-title {
+          font-size: 2.2rem;
+          font-weight: 700;
+          color: var(--kesem-lake-blue);
+          text-align: center;
+          margin-bottom: 3rem;
+          position: relative;
+        }
+
+        .tier-title::after {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 4px;
+          background: linear-gradient(90deg, var(--kesem-pool-aqua), var(--kesem-grass-green));
+          margin: 0.8rem auto;
+          border-radius: 2px;
+        }
+
+        .tier-title.directors::after {
+          background: linear-gradient(90deg, var(--kesem-sunshine-yellow), var(--kesem-sky-blue));
+        }
+
+        .tier-subtitle {
+          text-align: center;
+          color: var(--text-light);
+          font-size: 1.1rem;
+          margin-bottom: 3rem;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 3rem;
+        }
+
+        /* ===================================
+           Team Grid Layouts
+           ================================== */
+
+        /* Directors Grid - 2 columns */
+        .directors-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 3rem;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        /* Committee Grid - Responsive for committee pairs */
+        .committee-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 2rem;
+          margin-bottom: 4rem;
+        }
+
+        /* ===================================
+           Team Member Cards
+           ================================== */
+
+        .team-member {
+          background: var(--kesem-moon-white);
+          border-radius: 20px;
+          padding: 2.5rem 2rem;
+          box-shadow: 0 8px 25px var(--shadow-light);
+          transition: all 0.3s ease;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .team-member::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 5px;
+          background: linear-gradient(90deg, var(--kesem-sky-blue), var(--kesem-pool-aqua));
+        }
+
+        .team-member.director::before {
+          background: linear-gradient(90deg, var(--kesem-sunshine-yellow), var(--kesem-grass-green));
+          height: 8px;
+        }
+
+        .team-member:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 15px 35px var(--shadow-medium);
+        }
+
+        /* Profile Picture */
+        .profile-picture {
+          width: 150px;
+          height: 150px;
+          margin: 0 auto 1.5rem;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 4px solid var(--kesem-sky-blue);
+          transition: all 0.3s ease;
+        }
+
+        .team-member.director .profile-picture {
+          width: 180px;
+          height: 180px;
+          border-width: 6px;
+          border-color: var(--kesem-sunshine-yellow);
+        }
+
+        .team-member:hover .profile-picture {
+          transform: scale(1.05);
+          border-color: var(--kesem-pool-aqua);
+        }
+
+        .profile-picture img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .profile-placeholder {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(135deg, var(--kesem-grass-green), var(--kesem-sky-blue));
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--kesem-moon-white);
+          font-size: 3rem;
+          font-weight: 600;
+        }
+
+        .team-member.director .profile-placeholder {
+          font-size: 3.5rem;
+        }
+
+        /* Member Information */
+        .member-name {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: var(--kesem-lake-blue);
+          margin-bottom: 0.5rem;
+        }
+
+        .team-member.director .member-name {
+          font-size: 1.8rem;
+        }
+
+        .member-role {
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--kesem-night-sky-navy);
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .member-committee {
+          display: inline-block;
+          background: linear-gradient(135deg, var(--kesem-pool-aqua), var(--kesem-grass-green));
+          color: var(--kesem-moon-white);
+          padding: 0.3rem 1rem;
+          border-radius: 20px;
+          font-size: 0.9rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .member-description {
+          font-size: 0.95rem;
+          color: var(--text-light);
+          line-height: 1.6;
+          margin-bottom: 1rem;
+        }
+
+        .member-fun-fact {
+          font-size: 0.85rem;
+          color: var(--kesem-lake-blue);
+          font-style: italic;
+          background: var(--neutral-light);
+          padding: 0.8rem;
+          border-radius: 10px;
+          border-left: 3px solid var(--kesem-pool-aqua);
+        }
+
+        /* ===================================
+           Committee Section Headers
+           ================================== */
+
+        .committee-section {
+          margin-bottom: 4rem;
+        }
+
+        .committee-title {
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: var(--kesem-night-sky-navy);
+          text-align: center;
+          margin-bottom: 0.5rem;
+        }
+
+        .committee-description {
+          text-align: center;
+          color: var(--text-light);
+          font-size: 1rem;
+          margin-bottom: 2.5rem;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        /* ===================================
+           Join the Team CTA
+           ================================== */
+
+        .join-team-cta {
+          background: linear-gradient(135deg, var(--kesem-night-sky-navy), var(--kesem-lake-blue));
+          color: var(--kesem-moon-white);
+          padding: 4rem 0;
+          text-align: center;
+        }
+
+        .cta-content {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        .cta-title {
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        .cta-text {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+          opacity: 0.9;
+          line-height: 1.6;
+        }
+
+        .cta-button {
+          display: inline-block;
+          background-color: var(--kesem-sunshine-yellow);
+          color: var(--kesem-night-sky-navy);
+          font-size: 1.1rem;
+          font-weight: 700;
+          padding: 1rem 2.5rem;
+          border-radius: 50px;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          box-shadow: 0 6px 20px rgba(255, 219, 0, 0.3);
+        }
+
+        .cta-button:hover {
+          background-color: var(--kesem-pool-aqua);
+          color: var(--kesem-moon-white);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 30px rgba(0, 192, 138, 0.4);
+        }
+
+        /* ===================================
+           Responsive Design
+           ================================== */
+
+        @media screen and (max-width: 768px) {
+          .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            flex-direction: column;
+            background-color: var(--kesem-moon-white);
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            padding: 2rem 0;
+            gap: 0;
+          }
+
+          .nav-menu.active {
+            left: 0;
+          }
+
+          .nav-item {
+            margin: 1rem 0;
+          }
+
+          .hamburger {
+            display: flex;
+          }
+
+          .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+          }
+
+          .hamburger.active .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+          }
+
+          .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+          }
+
+          .page-title {
+            font-size: 2.2rem;
+          }
+
+          .team-section {
+            padding: 3rem 0;
+          }
+
+          .team-container {
+            padding: 0 1rem;
+          }
+
+          .directors-grid {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+          }
+
+          .committee-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .team-member {
+            padding: 2rem 1.5rem;
+          }
+
+          .profile-picture {
+            width: 120px;
+            height: 120px;
+          }
+
+          .team-member.director .profile-picture {
+            width: 140px;
+            height: 140px;
+          }
+
+          .profile-placeholder {
+            font-size: 2.5rem;
+          }
+
+          .tier-title {
+            font-size: 1.8rem;
+          }
+
+          .cta-title {
+            font-size: 2rem;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .page-title {
+            font-size: 1.8rem;
+          }
+
+          .tier-title {
+            font-size: 1.5rem;
+          }
+
+          .team-member {
+            padding: 1.5rem 1rem;
+          }
+
+          .cta-title {
+            font-size: 1.6rem;
+          }
+
+          .cta-button {
+            font-size: 1rem;
+            padding: 0.8rem 2rem;
+          }
+        }
+
+        /* ===================================
+           Accessibility Improvements
+           ================================== */
+
+        .nav-link:focus,
+        .cta-button:focus,
+        .team-member:focus {
+          outline: 3px solid var(--kesem-sunshine-yellow);
+          outline-offset: 2px;
+        }
+
+        /* Reduced motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+          .team-member,
+          .profile-picture,
+          .nav-link,
+          .cta-button {
+            transition: none;
+          }
+
+          .team-member:hover,
+          .team-member:hover .profile-picture {
+            transform: none;
+          }
+        }

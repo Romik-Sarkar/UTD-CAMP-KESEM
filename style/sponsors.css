@@ -1,0 +1,396 @@
+
+
+        /* ===================================
+           Main Content
+           ================================== */
+
+        main {
+          margin-top: 80px;
+          min-height: calc(100vh - 80px);
+        }
+
+        .page-header {
+          background: linear-gradient(135deg, var(--kesem-lake-blue), var(--kesem-sky-blue));
+          color: var(--kesem-moon-white);
+          padding: 4rem 0;
+          text-align: center;
+        }
+
+        .page-title {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-subtitle {
+          font-size: 1.2rem;
+          font-weight: 300;
+          opacity: 0.95;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        /* ===================================
+           Sponsors Section
+           ================================== */
+
+        .sponsors-section {
+          padding: 5rem 0;
+          background-color: var(--neutral-light);
+        }
+
+        .sponsors-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        .section-intro {
+          text-align: center;
+          margin-bottom: 4rem;
+        }
+
+        .section-intro h2 {
+          font-size: 2.5rem;
+          font-weight: 600;
+          color: var(--kesem-lake-blue);
+          margin-bottom: 1rem;
+        }
+
+        .section-intro p {
+          font-size: 1.1rem;
+          color: var(--text-light);
+          max-width: 700px;
+          margin: 0 auto;
+          line-height: 1.7;
+        }
+
+        /* ===================================
+           Sponsor Tiers
+           ================================== */
+
+        .sponsor-tier {
+          margin-bottom: 4rem;
+        }
+
+        .tier-title {
+          font-size: 1.8rem;
+          font-weight: 600;
+          color: var(--kesem-night-sky-navy);
+          text-align: center;
+          margin-bottom: 2rem;
+          position: relative;
+        }
+
+        .tier-title::after {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 3px;
+          background: linear-gradient(90deg, var(--kesem-pool-aqua), var(--kesem-grass-green));
+          margin: 0.5rem auto;
+          border-radius: 2px;
+        }
+
+        .tier-title.platinum::after {
+          background: linear-gradient(90deg, #E5E4E2, #C0C0C0);
+        }
+
+        .tier-title.gold::after {
+          background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+
+        .tier-title.silver::after {
+          background: linear-gradient(90deg, #C0C0C0, #A8A8A8);
+        }
+
+        .tier-title.bronze::after {
+          background: linear-gradient(90deg, #CD7F32, #A0522D);
+        }
+
+        /* ===================================
+           Sponsors Grid
+           ================================== */
+
+        .sponsors-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin-bottom: 3rem;
+        }
+
+        .sponsor-card {
+          background: var(--kesem-moon-white);
+          border-radius: 15px;
+          padding: 2rem;
+          box-shadow: 0 5px 20px var(--shadow-light);
+          transition: all 0.3s ease;
+          text-align: center;
+          border: 2px solid transparent;
+        }
+
+        .sponsor-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 15px 35px var(--shadow-medium);
+          border-color: var(--kesem-sky-blue);
+        }
+
+        .sponsor-logo {
+          width: 120px;
+          height: 120px;
+          margin: 0 auto 1.5rem;
+          border-radius: 10px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--neutral-medium);
+          transition: all 0.3s ease;
+        }
+
+        .sponsor-card:hover .sponsor-logo {
+          transform: scale(1.05);
+          box-shadow: 0 8px 25px var(--shadow-medium);
+        }
+
+        .sponsor-logo img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .sponsor-logo-placeholder {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, var(--kesem-grass-green), var(--kesem-sky-blue));
+          color: var(--kesem-moon-white);
+          font-weight: 600;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+
+        .sponsor-name {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: var(--kesem-lake-blue);
+          margin-bottom: 1rem;
+        }
+
+        .sponsor-description {
+          font-size: 0.95rem;
+          color: var(--text-light);
+          line-height: 1.6;
+        }
+
+        /* ===================================
+           Call-to-Action Banner
+           ================================== */
+
+        .cta-banner {
+          background: linear-gradient(135deg, var(--kesem-night-sky-navy), var(--kesem-lake-blue));
+          color: var(--kesem-moon-white);
+          padding: 4rem 0;
+          text-align: center;
+        }
+
+        .cta-content {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+
+        .cta-title {
+          font-size: 2.2rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+          font-size: 1.2rem;
+          margin-bottom: 2.5rem;
+          opacity: 0.9;
+          line-height: 1.6;
+        }
+
+        .cta-button {
+          display: inline-block;
+          background-color: var(--kesem-sunshine-yellow);
+          color: var(--kesem-night-sky-navy);
+          font-size: 1.2rem;
+          font-weight: 700;
+          padding: 1rem 2.5rem;
+          border-radius: 50px;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          box-shadow: 0 6px 20px rgba(255, 219, 0, 0.3);
+        }
+
+        .cta-button:hover {
+          background-color: var(--kesem-pool-aqua);
+          color: var(--kesem-moon-white);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 30px rgba(0, 192, 138, 0.4);
+        }
+
+        /* ===================================
+           Thank You Section
+           ================================== */
+
+        .thank-you-section {
+          background: var(--kesem-moon-white);
+          padding: 3rem 0;
+          text-align: center;
+          border-top: 3px solid var(--kesem-grass-green);
+        }
+
+        .thank-you-text {
+          max-width: 600px;
+          margin: 0 auto;
+          font-size: 1.1rem;
+          color: var(--text-light);
+          font-style: italic;
+        }
+
+        /* ===================================
+           Responsive Design
+           ================================== */
+
+        @media screen and (max-width: 768px) {
+          .nav-menu {
+            position: fixed;
+            left: -100%;
+            top: 70px;
+            flex-direction: column;
+            background-color: var(--kesem-moon-white);
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            padding: 2rem 0;
+            gap: 0;
+          }
+
+          .nav-menu.active {
+            left: 0;
+          }
+
+          .nav-item {
+            margin: 1rem 0;
+          }
+
+          .hamburger {
+            display: flex;
+          }
+
+          .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+          }
+
+          .hamburger.active .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+          }
+
+          .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+          }
+
+          .page-title {
+            font-size: 2.2rem;
+          }
+
+          .page-header {
+            padding: 3rem 0;
+          }
+
+          .sponsors-section {
+            padding: 3rem 0;
+          }
+
+          .sponsors-container {
+            padding: 0 1rem;
+          }
+
+          .section-intro h2 {
+            font-size: 2rem;
+          }
+
+          .sponsors-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+          }
+
+          .sponsor-card {
+            padding: 1.5rem;
+          }
+
+          .sponsor-logo {
+            width: 100px;
+            height: 100px;
+          }
+
+          .cta-title {
+            font-size: 1.8rem;
+          }
+
+          .cta-text {
+            font-size: 1rem;
+          }
+
+          .cta-content {
+            padding: 0 1rem;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          .sponsors-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .page-title {
+            font-size: 1.8rem;
+          }
+
+          .cta-title {
+            font-size: 1.6rem;
+          }
+
+          .cta-button {
+            font-size: 1rem;
+            padding: 0.8rem 2rem;
+          }
+        }
+
+        /* ===================================
+           Accessibility Improvements
+           ================================== */
+
+        .nav-link:focus,
+        .cta-button:focus,
+        .sponsor-card:focus {
+          outline: 3px solid var(--kesem-sunshine-yellow);
+          outline-offset: 2px;
+        }
+
+        /* Reduced motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+          .sponsor-card,
+          .sponsor-logo,
+          .nav-link,
+          .cta-button {
+            transition: none;
+          }
+
+          .sponsor-card:hover {
+            transform: none;
+          }
+
+          .sponsor-card:hover .sponsor-logo {
+            transform: none;
+          }
+        }
