@@ -2,6 +2,11 @@
    Camp Kesem UTD - Main Stylesheet
    ================================== */
 
+   /* Enable Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* CSS Custom Properties (Variables) for Brand Colors */
 :root {
   --kesem-lake-blue: #008FBE;
