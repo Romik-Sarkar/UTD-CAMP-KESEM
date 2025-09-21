@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Kesem UTD - Contact Us</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/contact.css">
+    
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar - This will be included from navbar.html -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">
+                Ready to get involved with Camp Kesem UTD? We'd love to hear from you! Whether you're interested in 
+                volunteering, have questions about our programs, or want to learn more about our mission.
+            </p>
+        </section>
+
+        <!-- Main Contact Section -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <!-- Contact Information Card -->
+                <div class="contact-info-card">
+                    <h2 class="contact-card-title">Get in Touch</h2>
+                    <div class="contact-methods">
+                        
+                        <!-- Email Contact -->
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email Us</h3>
+                                <p>For general inquiries, volunteer opportunities, or program questions</p>
+                                <a href="mailto:utdallas@kesem.org" class="contact-link">utdallas@kesem.org</a>
+                            </div>
+                        </div>
+
+                        <!-- Social Media - Instagram -->
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>Follow Us on Instagram</h3>
+                                <p>Stay updated with our latest activities and events</p>
+                                <a href="https://instagram.com/kesem.utdallas" class="contact-link" target="_blank">@kesem.utdallas</a>
+                            </div>
+                        </div>
+
+                        <!-- Social Media - Facebook -->
+                        <div class="contact-method">
+                            <div class="contact-icon">👥</div>
+                            <div class="contact-details">
+                                <h3>Facebook Community</h3>
+                                <p>Join our Facebook community for all of our camp pictures</p>
+                                <a href="https://www.facebook.com/Kesem.UTDallas/" class="contact-link">Camp Kesem UTD</a>
+                            </div>
+                        </div>
+
+                        <!-- Phone Contact -->
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>Call us during business hours</p>
+                                <a href="tel:+12134436847" class="contact-link">+1(213)-443-6847</a>
+                            </div>
+                        </div>
+                        !>
+                    </div>
+                </div>
+
+                <!-- Interest Form Card -->
+                <div class="interest-form-card">
+                    <h2 class="form-title">Express Your Interest</h2>
+                    <p class="form-subtitle">
+                        Fill out this form to let us know how you'd like to get involved. We'll redirect you to our 
+                        detailed Google Form to complete your application.
+                    </p>
+
+                    <form class="interest-form" action="#" method="POST" onsubmit="redirectToGoogleForm(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <!--
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        -->
+
+                        <div class="form-group">
+                            <label for="year">Academic Year</label>
+                            <select id="year" name="year">
+                                <option value="">Select your year</option>
+                                <option value="freshman">Freshman</option>
+                                <option value="sophomore">Sophomore</option>
+                                <option value="junior">Junior</option>
+                                <option value="senior">Senior</option>
+                                <option value="graduate">Graduate Student</option>
+                                <option value="alumni">Alumni</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Areas of Interest (select all that apply):</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="volunteer" name="interests" value="volunteer">
+                                    <label for="volunteer">General Volunteering</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="dev" name="interests" value="development">
+                                    <label for="dev">Development Committee (Fundraising)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="dev" name="interests" value="development">
+                                    <label for="dev">Volunteer Commitee (Campus Engagement)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="ops" name="interests" value="operations">
+                                    <label for="ops">Operations Committee (Camp Logistics)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="mtm" name="interests" value="make-magic">
+                                    <label for="mtm">Make the Magic Committee (Event Planning)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="amp" name="interests" value="marketing">
+                                    <label for="amp">Alumni & Marketing Committee (Social Media + graphics)</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="outreach" name="interests" value="outreach">
+                                    <label for="outreach">Outreach Committee (Camp family engagement) </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Tell us about yourself and why you're interested in Camp Kesem:</label>
+                            <textarea id="message" name="message" placeholder="Share your motivation, relevant experience, or any questions you have..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Continue to Full Application</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slack Community Section -->
+        <section class="slack-section">
+            <div class="slack-container">
+                <h2 class="slack-title">Join Our Community</h2>
+                <p class="slack-description">
+                    Connect with current members, stay updated on meetings and events, and be part of our 
+                    Camp Kesem UTD family! Join our Slack workspace to get real-time updates and connect with fellow volunteers.
+                </p>
+                <a href="https://kesemutdallas.slack.com" class="slack-button" target="_blank">
+                    <span class="slack-icon">💬</span>
+                    Join Our Slack
+                </a>
+            </div>
+        </section>
+
+        <!-- Additional Information -->
+        <section class="additional-info">
+            <div class="info-container">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-icon">🏕️</div>
+                        <h3>About Our Programs</h3>
+                        <p>
+                            Learn more about our free camp programs designed to support children and families 
+                            affected by cancer through creative activities and community building.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🤝</div>
+                        <h3>Volunteer Opportunities</h3>
+                        <p>
+                            From camp counselors to committee leaders, we have many ways for you to make a 
+                            meaningful impact in the lives of children and families in our community. <br>
+                            ~100 volunteer hours
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💝</div>
+                        <h3>Make a Difference</h3>
+                        <p>
+                            Every volunteer, donor, and supporter helps us create magical moments and lasting 
+                            friendships for children navigating their parent's cancer journey.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <div id="footer-placeholder"></div>
+
+
+
+<script src="scripts/scripts.js"></script>
+</body>
+</html>
+
+
