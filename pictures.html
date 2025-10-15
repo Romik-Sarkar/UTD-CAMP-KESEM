@@ -7,6 +7,7 @@
     
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/pics.css">
     
     <!-- Google Fonts - Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,53 +16,80 @@
     <!-- Navigation Bar - This will be included from navbar.html -->
     <div id="navbar-placeholder"></div>
 
-<!-- Main Content -->
+    <!-- Main Content -->
     <main>
         <!-- Page Header -->
         <section class="page-header">
             <h1 class="page-title">Our Camp Memories</h1>
             <p class="page-subtitle">
                 See a glimpse of the Kesem Magic through pictures <br>
-                Every smile, tear and laughter captured for our familes and sponsors <br>
+                Every smile, tear and laughter captured for our families and sponsors <br>
                 Shoutout to our Photographer Toast 🍞
             </p>
         </section>
 
-        <!-- Featured Slideshow -->
+        <!-- Featured Slideshow with Camp Highlights -->
         <section class="slideshow-container">
-            <!-- Slide 1 -->
+            <!-- Slide 1 - Creative Workshop -->
             <div class="slide active">
-                <div class="slide-placeholder">🎨 Arts & Crafts Activity</div>
+                <img src="images/art.jpg" alt="Creative Workshop" class="slide-img">
                 <div class="slide-caption">
-                    <h3>Creative Expression</h3>
-                    <p>Campers explore their creativity through various art projects and crafts</p>
+                    <h3>Creative Workshop</h3>
+                    <p>Campers expressing themselves through art therapy</p>
                 </div>
             </div>
 
-            <!-- Slide 2 -->
+            <!-- Slide 2 - Welcome Day -->
             <div class="slide">
-                <div class="slide-placeholder">🏃‍♀️ Outdoor Games</div>
+                <img src="images/campSetup.jpg" alt="Camp Setup" class="slide-img">
                 <div class="slide-caption">
-                    <h3>Active Fun</h3>
-                    <p>Building friendships and confidence through team activities and sports</p>
+                    <h3>Welcome Day</h3>
+                    <p>Setting up for an amazing week of camp</p>
                 </div>
             </div>
 
-            <!-- Slide 3 -->
+            <!-- Slide 3 - Friendship Circle -->
             <div class="slide">
-                <div class="slide-placeholder">🤝 Group Circle Time</div>
+                <img src="images/circle.jpg" alt="Friendship Circle" class="slide-img">
                 <div class="slide-caption">
-                    <h3>Support & Sharing</h3>
-                    <p>Safe spaces for campers to connect and share their experiences</p>
+                    <h3>Friendship Circle</h3>
+                    <p>Building lasting bonds and support networks</p>
                 </div>
             </div>
 
-            <!-- Slide 4 -->
+            <!-- Slide 4 - Fun & Games -->
             <div class="slide">
-                <div class="slide-placeholder">🎭 Performance & Shows</div>
+                <img src="images/swimming.jpg" alt="Fun & Games" class="slide-img">
                 <div class="slide-caption">
-                    <h3>Talent Show</h3>
-                    <p>Celebrating each camper's unique talents and building confidence</p>
+                    <h3>Fun & Games</h3>
+                    <p>Laughter and joy through interactive activities</p>
+                </div>
+            </div>
+
+            <!-- Slide 5 - Awards Ceremony -->
+            <div class="slide">
+                <div class="slide-placeholder">🌟 Awards Ceremony</div>
+                <div class="slide-caption">
+                    <h3>Recognition</h3>
+                    <p>Celebrating achievements and milestones</p>
+                </div>
+            </div>
+
+            <!-- Slide 6 - Food -->
+            <div class="slide">
+                <img src="images/food.jpg" alt="Mealtime" class="slide-img">
+                <div class="slide-caption">
+                    <h3>🍽️ Food</h3>
+                    <p>Your donations means a meal for a camper</p>
+                </div>
+            </div>
+
+            <!-- Slide 7 - Community -->
+            <div class="slide">
+                <img src="images/talentShow.jpg" alt="Talent Show" class="slide-img">
+                <div class="slide-caption">
+                    <h3>Community</h3>
+                    <p>A community of peers</p>
                 </div>
             </div>
 
@@ -75,81 +103,45 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
             </div>
         </section>
 
-        
-        <!-- Photo Grid Gallery -->
+        <!-- Facebook Album Link Section -->
+        <section class="facebook-album-section">
+            <a href="https://www.facebook.com/Kesem.UTDallas/photos_albums" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                <div class="facebook-album-card">
+                    <div class="facebook-album-bg">
+                        <div class="facebook-album-overlay">
+                            <div class="facebook-icon">📸</div>
+                            <h2 class="facebook-album-title">View Our Full Photo Album</h2>
+                            <p class="facebook-album-subtitle">
+                                See hundreds more memories from Camp Kesem UTD on Facebook
+                            </p>
+                            <button class="facebook-cta-btn">Visit Facebook Album</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Info Text -->
         <section class="gallery-section">
-            <h2 class="section-title">Camp Highlights</h2>
-            <div class="photo-grid">
-                <!-- Photo 1 -->
-                <div class="photo-card">
-                    <img src="images/art.jpg" alt="art" class="photo-img">
-                    <div class="photo-info">
-                        <h4>Creative Workshop</h4>
-                        <p>Campers expressing themselves through art therapy</p>
-                    </div>
-                </div>
-
-                <!-- Photo 2 -->
-                <div class="photo-card">
-                    <div class="photo-placeholder">🏕️ Camp Setup</div>
-                    <div class="photo-info">
-                        <h4>Welcome Day</h4>
-                        <p>Setting up for an amazing week of camp</p>
-                    </div>
-                </div>
-
-                <!-- Photo 3 -->
-                <div class="photo-card">
-                    <img src="images/circle.jpg" alt="circle" class="photo-img">
-                    <div class="photo-info">
-                        <h4>Friendship Circle</h4>
-                        <p>Building lasting bonds and support networks</p>
-                    </div>
-                </div>
-
-                <!-- Photo 4 -->
-                <div class="photo-card">
-                    <img src="images/swimming.jpg" alt="swimming" class="photo-img">
-                    <div class="photo-info">
-                        <h4>Fun & Games</h4>
-                        <p>Laughter and joy through interactive activities</p>
-                    </div>
-                </div>
-
-                <!-- Photo 5 -->
-                <div class="photo-card">
-                    <div class="photo-placeholder">🌟 Awards Ceremony</div>
-                    <div class="photo-info">
-                        <h4>Recognition</h4>
-                        <p>Celebrating achievements and milestones</p>
-                    </div>
-                </div>
-
-                <!-- Photo 6 -->
-            <div class="photo-card">
-                <img src="images/food.jpg" alt="Food" class="photo-img">
-                <div class="photo-info">
-                    <h4>🍝 Food</h4>
-                    <p>Your donations means a meal for a camper</p>
-                </div>
-            </div>
-
-                            <!-- Photo 7 -->
-            <div class="photo-card">
-                <img src="images/talentShow.jpg" alt="talentSHow" class="photo-img">
-                <div class="photo-info">
-                    <h4>Community</h4>
-                    <p>A community of peers</p>
-                </div>
-            </div>
+            <div style="text-align: center; margin-bottom: 2rem; padding: 2rem; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 15px;">
+                <h2 class="section-title" style="margin-bottom: 1rem;">More Memories Await!</h2>
+                <p style="font-size: 1.1rem; color: #666; line-height: 1.8;">
+                    These highlights are just a glimpse of the amazing moments at Camp Kesem UTD. 
+                    Visit our Facebook album to see the full collection of photos capturing the joy, 
+                    friendship, and magic that happens at camp. Every photo tells a story of hope, 
+                    healing, and the incredible resilience of our campers.
+                </p>
             </div>
         </section>
     </main>
 
-     <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
 
 

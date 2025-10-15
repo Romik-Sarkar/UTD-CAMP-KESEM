@@ -1,4 +1,3 @@
-
         let slideIndex = 1;
         
         // Initialize slideshow
@@ -7,7 +6,8 @@
         // Auto-advance slideshow every 5 seconds
         setInterval(() => {
             slideIndex++;
-            if (slideIndex > document.querySelectorAll('.slide').length) {
+            const slides = document.querySelectorAll('.slide');
+            if (slideIndex > slides.length) {
                 slideIndex = 1;
             }
             showSlide(slideIndex);
@@ -38,21 +38,3 @@
                 dots[slideIndex - 1].classList.add('active');
             }
         }
-
-        // Mobile menu toggle functionality
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-\

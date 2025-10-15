@@ -1268,3 +1268,765 @@ main {
             font-size: 1.4rem;
           }
         }
+
+/* ===================================
+   MOBILE RESPONSIVENESS FIXES
+   Add these updates to your existing CSS files
+   ================================== */
+
+/* ===================================
+   1. GLOBAL MOBILE FIXES (styles.css)
+   ================================== */
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Make all containers responsive */
+.hero-container,
+.mission-container,
+.cta-container,
+.team-container,
+.sponsors-container,
+.contact-container,
+.info-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Fix images to never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===================================
+   2. NAVIGATION MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  /* Fix navbar on mobile */
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  /* Logo sizing */
+  .logo-img {
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  /* Hamburger menu styling */
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  /* Mobile menu */
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 60px;
+    flex-direction: column;
+    background-color: var(--kesem-moon-white);
+    width: 100%;
+    text-align: center;
+    transition: left 0.3s ease;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+    gap: 0;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* ===================================
+   3. HERO SECTION MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   4. MISSION SECTION MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  .mission {
+    padding: 3rem 0;
+  }
+
+  .mission-container {
+    padding: 0 1rem;
+  }
+
+  .mission-title {
+    font-size: 1.8rem;
+  }
+
+  .mission-text {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .mission-list {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .mission-list li {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
+
+/* ===================================
+   5. CONTACT PAGE MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .contact-info-card,
+  .interest-form-card {
+    padding: 1.5rem;
+  }
+
+  .contact-card-title,
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* Form improvements */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Slack section */
+  .slack-section {
+    padding: 3rem 1rem;
+  }
+
+  .slack-title {
+    font-size: 1.8rem;
+  }
+
+  .slack-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  /* Info cards */
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ===================================
+   6. EVENTS PAGE MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 1024px) {
+  .events-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .sidebar {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Calendar mobile styling */
+  .calendar-section {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .calendar-header {
+    padding: 1rem;
+  }
+
+  .month-year {
+    font-size: 1.3rem;
+  }
+
+  .nav-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Fix calendar grid to show all 7 days */
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .calendar-day-header {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .calendar-day {
+    min-height: 70px;
+    max-height: 70px;
+    padding: 0.2rem;
+    font-size: 0.75rem;
+    overflow: hidden;
+  }
+
+  .day-number {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .event-title-calendar {
+    font-size: 0.5rem;
+    line-height: 1.1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .event-indicator {
+    width: 4px;
+    height: 4px;
+    margin-bottom: 1px;
+  }
+
+  /* Event popup mobile */
+  .popup-content {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .popup-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+  .calendar-day-header {
+    font-size: 0.6rem;
+    padding: 0.4rem 0.1rem;
+  }
+
+  .calendar-day {
+    min-height: 60px;
+    max-height: 60px;
+    padding: 0.15rem;
+  }
+
+  .day-number {
+    font-size: 0.7rem;
+  }
+
+  .event-title-calendar {
+    font-size: 0.45rem;
+  }
+
+  .nav-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .month-year {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===================================
+   7. PICTURES PAGE MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  .slideshow-container {
+    margin: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .slide-caption {
+    padding: 1rem 0.5rem 0.5rem;
+  }
+
+  .slide-caption h3 {
+    font-size: 1.1rem;
+  }
+
+  .slide-caption p {
+    font-size: 0.8rem;
+  }
+
+  /* Navigation arrows */
+  .prev, .next {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  /* Dots */
+  .dots-container {
+    padding: 15px;
+  }
+
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 3px;
+  }
+
+  /* Facebook album card */
+  .facebook-album-section {
+    padding: 0 1rem;
+    margin: 3rem auto 2rem;
+  }
+
+  .facebook-album-card {
+    height: 300px;
+  }
+
+  .facebook-album-title {
+    font-size: 1.5rem;
+  }
+
+  .facebook-album-subtitle {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .facebook-icon {
+    font-size: 2.5rem;
+  }
+
+  .facebook-cta-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Gallery section */
+  .gallery-section {
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* ===================================
+   8. SPONSORS PAGE MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  .sponsors-section {
+    padding: 3rem 0;
+  }
+
+  .sponsors-container {
+    padding: 0 1rem;
+  }
+
+  .section-intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-intro p {
+    font-size: 1rem;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sponsor-card {
+    padding: 1.5rem;
+  }
+
+  .sponsor-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sponsor-name {
+    font-size: 1.2rem;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    padding: 3rem 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ===================================
+   9. TEAM PAGE MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 1024px) {
+  .page-layout {
+    flex-direction: column;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    position: relative;
+    top: auto;
+    margin-bottom: 2rem;
+  }
+
+  .content-area {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team-section {
+    padding: 3rem 0;
+  }
+
+  .team-container {
+    padding: 0 1rem;
+  }
+
+  .tier-title {
+    font-size: 1.6rem;
+  }
+
+  .tier-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .directors-grid,
+  .committee-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .team-member {
+    padding: 1.5rem;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-member.director .profile-picture {
+    width: 140px;
+    height: 140px;
+  }
+
+  .member-name {
+    font-size: 1.3rem;
+  }
+
+  .team-member.director .member-name {
+    font-size: 1.5rem;
+  }
+
+  .member-description {
+    font-size: 0.9rem;
+  }
+
+  .committee-title {
+    font-size: 1.5rem;
+  }
+
+  .committee-description {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+}
+
+/* ===================================
+   10. FOOTER MOBILE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   11. TOUCH-FRIENDLY IMPROVEMENTS
+   ================================== */
+
+/* Larger touch targets for mobile */
+@media screen and (max-width: 768px) {
+  .nav-link,
+  .cta-btn,
+  .submit-btn,
+  .slack-button,
+  .cta-button,
+  button {
+    min-height: 44px; /* Apple's recommended touch target size */
+    min-width: 44px;
+  }
+
+  /* Increase spacing between clickable elements */
+  .checkbox-item {
+    padding: 0.5rem 0;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0;
+  }
+}
+
+/* ===================================
+   12. VIEWPORT AND ZOOM FIXES
+   ================================== */
+
+/* Prevent iOS auto-zoom on form inputs */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+}
+
+/* ===================================
+   13. LANDSCAPE MODE FIXES
+   ================================== */
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 1.5rem 0;
+  }
+
+  .page-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .nav-menu {
+    height: 100vh;
+  }
+}
+
+/* ===================================
+   14. ADDITIONAL UTILITY CLASSES
+   ================================== */
+
+/* Add these to your HTML as needed */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-center {
+    text-align: center !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+}
+
+/* ===================================
+   15. PERFORMANCE OPTIMIZATION
+   ================================== */
+
+/* Disable animations on lower-powered devices */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize images for mobile */
+@media screen and (max-width: 768px) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
